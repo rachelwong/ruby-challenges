@@ -37,3 +37,16 @@ sum_numbers(numbers)
 
 # Hint:
 # You could test what happens when you call sum_numbers([])?
+
+
+# Anthony's solution
+# def sum_numbers (numbers)
+#   acc = 0
+#   numbers.each do |num|
+#     acc += num
+#   end
+#   acc
+# rescue Exception => e
+#   p e.class, "Invalid input, please provide an array of numerable elements"
+#   return nil
+# end
