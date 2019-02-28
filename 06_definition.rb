@@ -13,7 +13,6 @@
 #
 # Check your solution by running the tests:
 # ruby tests/06_definition_test.rb
-
 class Definition
     attr_accessor :word, :definition
 
