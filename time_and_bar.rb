@@ -58,15 +58,15 @@ until order == "done" # unless customer ends order
     case order
         when "cocktail" # if user input cocktail, increment value by 1 on the list hash
             list["cocktail"] += 1
-            return list # print list of drinks
+            puts list # print list of drinks
             puts calculator(list) # send list hash to calculator method to calculate and print the total profit
         when "water" # if user input water, increment value by 1 on the list hash
             list["water"] += 1
-            return list # print list of drinks
+            puts list # print list of drinks
             puts calculator(list) # send list hash to calculator method to calculate and print the total profit
         when "beer" # if user input beer, increment value by 1 on the list hash
             list["beer"] += 1
-            return list # print list of drinks
+            puts list # print list of drinks
             puts calculator(list) # send list hash to calculator method to calculate and print the total profit
         else # if user input anything else, error
             puts "Error: choose from cocktail, water or beer" # alert customer to input order
