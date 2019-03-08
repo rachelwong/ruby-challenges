@@ -11,7 +11,17 @@
 # ruby tests/08_count_letters_test.rb
 
 def count_letters (string)
-  result = {} # You'll need an empty hash to get started!
-
+  newArray = []
+  result = Hash.new(0)
+  newArray = string.chars
+  newArray.each do |letter|
+    result[letter] += 1
+  end
   return result # return the hash
 end
+# def count_letters (string)
+#   result = {} # You'll need an empty hash to get started!
+#   result = string.split("").map{|x| x.length}.join("")
+#   return result # return the hash
+# end
+

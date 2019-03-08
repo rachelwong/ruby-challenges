@@ -16,8 +16,8 @@ def sum_numbers (numbers)
 
   sum = 0
   # for each item "a" in numbers array, aggregate the sum
-  numbers.each {
-    |a| sum += a
+  numbers.each {|a| 
+    sum += a
   }
 
   return sum
