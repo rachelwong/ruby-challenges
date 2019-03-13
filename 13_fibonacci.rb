@@ -22,7 +22,7 @@
 # Check your solution by running the tests:
 # ruby tests/13_fibonacci_test.rb
 
-# Class solution
+# Class solution 1
 def nthFibonacci (n)
   fib_array = [0,1]
   (0..n).each do |i|
@@ -31,3 +31,8 @@ def nthFibonacci (n)
   return fib_array[n]
 end
 puts nthFibonacci(7)
+
+# Class solution 2
+def nthFibonacci(n)
+  n <= 1 ? n : nthFibonacci(n - 1) + nthFibonacci(n - 2)
+end
