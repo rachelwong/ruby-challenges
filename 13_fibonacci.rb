@@ -34,5 +34,9 @@ puts nthFibonacci(7)
 
 # Class solution 2
 def nthFibonacci(n)
-  n <= 1 ? n : nthFibonacci(n - 1) + nthFibonacci(n - 2)
+  if n <= 1
+    return n
+  else 
+    nthFibonacci(n - 1) + nthFibonacci(n - 2)
+  end
 end
