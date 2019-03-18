@@ -35,5 +35,9 @@ def count_letters (string)
   return result # return the hash
   end
 end
+# def count_letters (string)
+#   result = {} # You'll need an empty hash to get started!
+#   result = string.split("").map{|x| x.length}.join("")
+#   return result # return the hash
+# end
 
-count_letters("hello")

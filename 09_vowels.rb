@@ -10,6 +10,12 @@
 # Check your solution by running the tests:
 # ruby tests/09_vowels_test.rb
 
+  # split the string into array of characters
+  # for each character in the array
+    # if character != a or e or i or o or u
+      # remove the non vowel element from the array
+    # reaches end of the array, return the array
+
 def vowels (string)
   array = string.chars() # convert string into an array of characters
   result = []
