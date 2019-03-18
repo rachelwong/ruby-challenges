@@ -34,8 +34,8 @@ def count_words(input)
     return output
 end
 
-def output_contains_key?(ouput, key)
-    output.each do |k|
+def output_contains_key?(output, key)
+    output.each do |k|t
         if k === key
             return true
         end

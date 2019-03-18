@@ -30,12 +30,13 @@
 
 def fizzbuzz(number)
     number = number.to_i
-    if number % 3
-        puts "Fizz"
-    elsif number % 5
-        puts "Buzz"
-    elsif number % 5 && number % 3
+    # with Matt's help to reorder the condition
+    if number % 5 == 0 && number % 3 == 0
         puts "Fizzbuzz"
+    elsif number % 3 == 0
+        puts "Fizz"
+    elsif number % 5 == 0
+        puts "Buzz"
     end
 end
 
