@@ -27,3 +27,16 @@
 # ...etc
 
 # Your code here
+
+def fizzbuzz(number)
+    number = number.to_i
+    if number % 3
+        puts "Fizz"
+    elsif number % 5
+        puts "Buzz"
+    elsif number % 5 && number % 3
+        puts "Fizzbuzz"
+    end
+end
+
+fizzbuzz(15)

@@ -20,5 +20,5 @@ def vowels (string)
   end
   print result
 end
-
+  
 vowels("Hello World")
