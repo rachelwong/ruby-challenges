@@ -16,7 +16,6 @@
      `git push origin master`
 
 ## List of challenge branches
-
 * 01_ruby_intro
 * 02_input_output
 * 03_largest_number
@@ -28,3 +27,7 @@
 * 09_vowels
 * 10_unique
 * 11_fizzbuzz
+* 12_count_words
+* 13_fibonacci
+* 14_hackerman
+* 15_change_letters
