@@ -25,4 +25,10 @@
 
 def sort(num_array)
     # Your code goes here
+
+    # uniq will get rid of duplicating characters
+    # resulting array of unique elments
+    if num_arraydown.case.split().uniq.length = 2
+        return false
+
 end

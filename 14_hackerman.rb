@@ -27,12 +27,11 @@ puts "Input your second input."
 second_input = gets.chomp.split(" ")
 
 # combine first_input array with second_input array
-
 for item in output do
     # if item is in anywhere in output
     if output.include?(item)
         # replace with HIDDEN
-c        puts "I have found #{item}."
+       puts "I have found #{item}."
         #otherwise do nothing
     end
 end
