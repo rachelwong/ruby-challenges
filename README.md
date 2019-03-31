@@ -39,7 +39,7 @@
 * 19_balanced_number
 * 20_descending_numbers
 * 21_sort_numbers
-<<<<<<< HEAD
-=======
 * 22_exes_ohs
->>>>>>> 4a3959cc538f83ca85bc65db68ff57b1adb64ac5
+* 23_first_non_repeating
+* 24_isogram
+* 25_remove_adjacent_duplicates
