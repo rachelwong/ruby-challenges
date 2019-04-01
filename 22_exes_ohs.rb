@@ -38,10 +38,37 @@ def exes_and_ohs(input)
     index = 0
     new_hash = Hash.new(0)
 
-    if new_array[index].count 
+    for char in new_array do
+        # if the character is a key in the hash
+        if new_hash.key?(char)
+            # increment the key's value by one
+            new_hash[char] += 1
+        else
+            new_hash[char]= 1
+        end
+    end
+    
+    # comparing the last value in the array with nil, returns false and drops out auto 
+    i = 0
+    frequency_array = new_hash.values
+    while i < frequency_array.length - 1 # off by one error
+        if frequency_array[i] != frequency_array[i+1] 
+            return false # because return will stop the iteration 
+        end
+        i += 1 # increment to escape infinite loop
+    end
 
+    # previous_item = 23
+    # array.each |item| do
+    #     if item == previous_item
+    #         puts "hello"
+    #     else
+    #         puts "yo"
+    #     end
+    #     previous_item = item
+    # end
 
-        # if values of keys are equal to each other
-        # return true
-        # else return false
+    return true # run through the length of the values, if none are differnt then return true
 end
+
+p exes_and_ohs("aaabbbccc")
