@@ -36,13 +36,19 @@ end
 def remove_adjacent_duplicates(input)
     check = input.split('')
     index = 0
+    # for the length of size, do the following block
     check.size.times{
+        # if the first character you check IS SAME AS the second character you check
         if check[index] == check[index+1]
+            # delete the first character that you check
             check.delete_at[index]
+
+        # otherwise, continue to iterate through the loop
         else
             index+=1
         end
     }
+    # once you have reached the end of the array, print your result 
     p check
 end
 
