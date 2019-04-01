@@ -29,20 +29,17 @@ def first_non_repeating(input)
     input_array = input.chars
     index = 0
     input_hash = {}
-
     for char in input_array do
         # If it's not in the hash already
         if input_hash.key?(char)
         # add char as key to input_hash
         # increment 1 to value of the char key in input_hash
             input_hash[char] += 1
-            p input_hash 
         else
             # create a new key in input_hash and assign value as one
             input_hash[char] = 1
         end
     end
-
     return input_hash.key(1)
 end
 

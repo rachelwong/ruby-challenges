@@ -34,4 +34,14 @@
 
 def exes_and_ohs(input)
     # Your code goes here
+    new_array = input.chars
+    index = 0
+    new_hash = Hash.new(0)
+
+    if new_array[index].count 
+
+
+        # if values of keys are equal to each other
+        # return true
+        # else return false
 end
