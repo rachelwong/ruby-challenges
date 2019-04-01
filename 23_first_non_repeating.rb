@@ -26,10 +26,44 @@
 # non-repeat, without checking every other letter?
 
 def first_non_repeating(input)
-    # Your code goes here
+    input_array = input.chars
+    index = 0
+    input_hash = {}
+
+    for char in input_array do
+        # If it's not in the hash already
+        if input_hash.key?(char)
+        # add char as key to input_hash
+        # increment 1 to value of the char key in input_hash
+            input_hash[char] += 1
+            p input_hash 
+        else
+            # create a new key in input_hash and assign value as one
+            input_hash[char] = 1
+        end
+    end
+
+    return input_hash.key(1)
 end
 
+# def first_non_repeating(input)
+#     index = 0
+#     input_array = input.chars
+#     input_hash = Hash.new(0)
+#     while index < input_array.length
+#         if input_array[index + 1] == input_array[index]
+#             input_hash[input_array[index]] += 1
+#             p input_hash
+#             index += 1
+#         else
+#             input_hash[input_array[index]] = 1
+#             index +=1
+#             break
+#         end
+#     end
+#     p input_hash[input_array[index]]
+# end
 # Test your code here
 puts first_non_repeating("aaaabbbcccdeeefgh")
-puts first_non_repeating("wwwhhhggge")
-puts first_non_repeating("wwwhhhggg")
+# puts first_non_repeating("wwwhhhggge")
+# puts first_non_repeating("wwwhhhggg")
