@@ -17,8 +17,17 @@
 
 
 def max_min(num_string)
-    num_array = num_string.split(" ")
-    p new_array = num_array.map(&:to_i).minmax
+   p num_array = num_string.split(" ").map(&:to_i).minmax
+    # p new_array = num_array
+end 
+
+def max_min(num_string)
+    # Split the input into a string of numbers 
+    # Convert each into a number
+    # Sort numbers from smallest to largest
+    # return the values at the first and last position in the array
+    # Returned the values joined together as an array
+    return (num_string.split(' ').map(&:to_i).sort).values_at(-1, 0).join(' ')
 end
 
 max_min("15 4 4 38 -9")

@@ -21,4 +21,13 @@
 
 def palindrome (string)
   # Your code here
+  input_array = string.chars
+  for char in input_array do
+    if char != input_array[-1]
+      p char
+      return false
+    end
+  end
 end
+
+palindrome("hello")

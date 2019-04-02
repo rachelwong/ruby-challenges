@@ -72,3 +72,33 @@ def exes_and_ohs(input)
 end
 
 p exes_and_ohs("aaabbbccc")
+
+def exes_and_ohs(input)
+    # Use downcase so we can treat the chars as case insensitive
+    chars = input.downcase.chars
+  
+    # Use a hash to count the character. The key will be a character (eg 'x') and
+    # the value the occurence of each characters. 
+    #
+    # I'll use `Hash.new()` instead of `{}` so I can set a default value for keys
+    character_count = Hash.new(0)
+  
+    chars.each do |char|
+      character_count[char] += 1
+    end
+  
+    # Check there are only two characters in the string
+    # If not: it's not balanced so return false
+    if character_count.keys.length != 2
+      return false
+    end
+  
+    # Check the count of the first character and the second character are the same
+    # If not, it's unbalanced so return false
+    if character_count.values[0] != character_count.values[1]
+      return false
+    end
+  
+    # If we've got this far the characters must be balanced, so return true
+    return true
+  end

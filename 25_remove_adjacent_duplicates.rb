@@ -42,7 +42,6 @@ def remove_adjacent_duplicates(input)
         if check[index] == check[index+1]
             # delete the first character that you check
             check.delete_at[index]
-
         # otherwise, continue to iterate through the loop
         else
             index+=1
