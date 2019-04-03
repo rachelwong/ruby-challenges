@@ -19,7 +19,7 @@
 def max_min(num_string)
    p num_array = num_string.split(" ").map(&:to_i).minmax
     # p new_array = num_array
-end 
+end
 
 def max_min(num_string)
     # Split the input into a string of numbers 
