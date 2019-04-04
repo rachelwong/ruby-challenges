@@ -25,15 +25,29 @@
 
 def sort(num_array)
     # Your code goes here
-    
 
-    
+    if num_array.length <= 1
+        return num_array
+    else 
+        pivot = num_array.sample
+        p pivot
+        num_array.delete_at(num_array.index(pivot)) #remove pivot
+        less = []
+        greater = []
+
+        num_array.each do |num|
+            if num <= pivot
+                less << num
+            else
+                great << num
+            end
+        end
+    end
+    sorted_array = []
+    sorted_array << self.sort(less)
+    sorted_array << pivot
+    sorted_array << self.sort(great)
 end
 
-def sort(num_array)
-    # uniq will get rid of duplicating characters
-    # resulting array of unique elments
-    if num_arraydown.case.split().uniq.length = 2
-        return false
 
-end
+sort([2,5,4,8,2])

@@ -44,17 +44,15 @@ def in_array_strict? (string, arr, strict)
     # else return false
 
     if strict == false
-        new_string = string.downcase
-        # new_arr = arr.map(&:downcase)
-        
-        for word in arr
+        for word in arr do 
             if string.downcase == word.downcase
                 return true
-            else
-                return false
             end
         end
-
+        return false
+        # new_string = string.downcase
+        # new_arr = arr.map(&:downcase)
+        
         # if new_arr.include?(new_string)
         #     return true
         # else
@@ -62,7 +60,7 @@ def in_array_strict? (string, arr, strict)
         # end
     end
 end
-p in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], true) 
+# p in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], true) 
 # => false
-# in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], false) 
+# p in_array_strict?("HeLLo", ["hi", "howdy", "Hello"], false) 
 #=> true
