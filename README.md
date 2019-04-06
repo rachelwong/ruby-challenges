@@ -46,3 +46,7 @@
 * 26_max_min
 * 27_in_array_strict
 * 28_good_walk
+<<<<<<< HEAD
+=======
+* 29_shortest_walk
+>>>>>>> dff6e760c9959c86184b60ddc6905141bbc5ad6a

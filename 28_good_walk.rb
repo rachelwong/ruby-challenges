@@ -26,5 +26,33 @@
 # has a file name ending in _spec.rb
 
 def good_walk(walk)
-    # your code goes here
+    # If N = S, E = W AND within 10 minutes, then true
+    # else false
+    walkhome = {"n" => 0, "s" => 0, "e" => 0, "w" => 0}
+
+    # increment the walkhome hash with the input
+    for direction in walk do
+        walkhome[direction] +=1
+    end
+
+    # If north = south AND east = west
+    if walkhome.values < 10
+        if walkhome["n"] == walkhome["s"] && walkhome["e"] == walkhome["w"] 
+            return true
+        else
+            return false
+        end
+    end
 end
+
+good_walk(["n", "s", "w", "e"])
+
+## LEO's SOLUTION
+# if walk.length == 10
+
+#     if walk.count(north) == walk.count(south) && walk.count(east) == walk.count(west)
+#         return true
+#     else
+#         return false
+#     end 
+# end
