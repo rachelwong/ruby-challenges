@@ -49,4 +49,46 @@
 
 def balanced_num(number)
     # Your code goes here
+    left = 0
+    right = 0
+    # convert the integer into an array of digits
+    num_array = number.to_s.split("").map{|num| num.to_i}
+
+    if num_array.length.even?
+        # left = from 0 to length /2 -1
+        left = num_array.slice(0, num_array.length / 2 - 1)
+        # right from length /2 +1 to end of array
+        right = num_array.slice(num_array.length/2 +1, num_array.length)
+        # if sum of left = sum of right then return balanced
+        compare(left, right)
+    else
+        # left = from 0 to length / 2
+        left = num_array.slice(0, num_array.length / 2)
+        # right = from length / 2 to end of array
+        right = num_array.slice(num_array.length / 2 + 1, num_array.length)
+        # if sum of left = sum of right then return balanced
+        compare(left, right)
+    end 
 end
+
+# adds up the array and return a single integer
+def sum_it_up(array)
+    sum_of_array = 0
+    array.each do |num|
+        sum_of_array += num
+    end
+    return sum_of_array
+end
+
+def compare(left, right)
+    if sum_it_up(left) == sum_it_up(right)
+        p "Balanced"
+    else
+        p "Not Balanced"
+    end
+end
+
+balanced_num(295591) # Not Balanced
+balanced_num(959) # balanced
+
+
