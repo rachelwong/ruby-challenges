@@ -24,30 +24,45 @@
 # Expected output: [2,2,4,5,8]
 
 def sort(num_array)
-    # Your code goes here
-
-    if num_array.length <= 1
-        return num_array
-    else 
-        pivot = num_array.sample
-        p pivot
-        num_array.delete_at(num_array.index(pivot)) #remove pivot
-        less = []
-        greater = []
-
-        num_array.each do |num|
-            if num <= pivot
-                less << num
-            else
-                great << num
-            end
+    p pivot = num_array[rand(0..num_array.length)]
+    for num in num_array
+        if num < pivot
+            num_array.unshift(num) 
+        else
+            num_array << num
         end
     end
-    sorted_array = []
-    sorted_array << self.sort(less)
-    sorted_array << pivot
-    sorted_array << self.sort(great)
+    p num_array
 end
 
+def partition
+end
 
 sort([2,5,4,8,2])
+# def sort(num_array)
+#     # Your code goes here
+
+#     if num_array.length <= 1
+#         return num_array
+#     else 
+#         pivot = num_array.sample
+#         p pivot
+#         num_array.delete_at(num_array.index(pivot)) #remove pivot
+#         less = []
+#         greater = []
+
+#         num_array.each do |num|
+#             if num <= pivot
+#                 less << num
+#             else
+#                 great << num
+#             end
+#         end
+#     end
+#     sorted_array = []
+#     sorted_array << self.sort(less)
+#     sorted_array << pivot
+#     sorted_array << self.sort(great)
+# end
+
+

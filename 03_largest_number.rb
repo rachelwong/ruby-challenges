@@ -18,6 +18,11 @@
 
 def largest_number (number_1, number_2)
   # Your code here
+  if number_1 > number_2
+    return number_1
+  else
+    return number_2
+  end
 end
 
-largest_number(100,50)
+p largest_number(100,50)
