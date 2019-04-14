@@ -40,27 +40,9 @@ def first_non_repeating(input)
             input_hash[char] = 1
         end
     end
-    return input_hash.key(1)
+    p input_hash.key(1)
 end
-
-# def first_non_repeating(input)
-#     index = 0
-#     input_array = input.chars
-#     input_hash = Hash.new(0)
-#     while index < input_array.length
-#         if input_array[index + 1] == input_array[index]
-#             input_hash[input_array[index]] += 1
-#             p input_hash
-#             index += 1
-#         else
-#             input_hash[input_array[index]] = 1
-#             index +=1
-#             break
-#         end
-#     end
-#     p input_hash[input_array[index]]
-# end
 # Test your code here
-puts first_non_repeating("aaaabbbcccdeeefgh")
+# puts first_non_repeating("aaaabbbcccdeeefgh")
 # puts first_non_repeating("wwwhhhggge")
-# puts first_non_repeating("wwwhhhggg")
+first_non_repeating("wwwhhhggg")

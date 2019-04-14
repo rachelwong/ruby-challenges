@@ -43,8 +43,28 @@
 
 # The test with the challenge use rspec
 
+# def shortest_walk(walk)
+#     directions = { "NORTH" => 0, "SOUTH" => 0, "WEST" => 0, "EAST" => 0}
+
+#     for vector in walk do
+#         case vector
+#         when "NORTH"
+#             directions["NORTH"] +=1
+#         when "SOUTH"
+#             directions["SOUTH"] +=1
+#         when "WEST"
+#             directions["WEST"] +=1
+#         when "EAST"
+#             directions["EAST"] +=1
+#         end
+#     end
+#     p directions.values
+# end
+# p shortest_walk(["NORTH", "SOUTH", "EAST", "WEST"]) # => []
+# shortest_walk(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]) # => ["WEST"]
+
 def shortest_walk(walk)
-    # initialise separate arrays to hold the filtered vectors
+#     # initialise separate arrays to hold the filtered vectors
     north = []
     south = []
     east = []
@@ -93,36 +113,4 @@ def shortest_walk(walk)
     end
 end
 
-# THIS DOESN"T WORK
-# def shortest_walk(walk)
-#         # if there is more east than west
-#     if walk.count("EAST") > walk.count("WEST")
-#         # return number of east vectors from the difference
-#         p "i'm here"
-#         return walk.sample(walk.count("EAST") - walk.count("WEST"))
-#     # if there are more west than east
-#     elsif walk.count("WEST") > walk.count("EAST")
-#         # return number of west vectors from the difference
-#         return walk.sample(walk.count("WEST") - walk.count("EAST"))
-#     # if there are equal numbers of east and west vectors
-#     elsif walk.count("EAST") == walk.count("WEST")
-#         # return an empty array
-#         return []
-#     end
-
-#     # if there are more south vectors than north vectors
-#     if walk.count("SOUTH") > walk.count("NORTH")
-#         # return number of south vectors from the difference
-#         return walk.sample(walk.count("SOUTH") - walk.count("NORTH"))
-#     # if there are more north vectors than south vectors
-#     elsif walk.count("NORTH") > walk.count("SOUTH")
-#         # return number of north vectors from the difference
-#         return walk.sample(walk.count("NORTH") - walk.count("SOUTH"))
-#     # if there are equal numbers of northa and south vectors
-#     elsif walk.count("NORTH") == walk.count("SOUTH")
-#         # return an empty array
-#         return []
-#     end
-# end
-# p shortest_walk(["NORTH", "SOUTH", "EAST", "WEST"]) # => []
-p shortest_walk(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]) # => ["WEST"]
+p shortest_walk(["NORTH", "SOUTH", "WEST", "EAST"])

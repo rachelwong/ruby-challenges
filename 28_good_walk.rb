@@ -48,11 +48,11 @@ end
 good_walk(["n", "s", "w", "e"])
 
 ## LEO's SOLUTION
-# if walk.length == 10
+if walk.length == 10
 
-#     if walk.count(north) == walk.count(south) && walk.count(east) == walk.count(west)
-#         return true
-#     else
-#         return false
-#     end 
-# end
+    if walk.count(north) == walk.count(south) && walk.count(east) == walk.count(west)
+        return true
+    else
+        return false
+    end 
+end
