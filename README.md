@@ -47,3 +47,5 @@
 * 27_in_array_strict
 * 28_good_walk
 * 29_shortest_walk
+* 30_spin_words
+* 31_missing_letter
