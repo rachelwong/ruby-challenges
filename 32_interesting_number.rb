@@ -16,5 +16,36 @@
 # interesting_number(3210) => true
 
 def interesting_number(number)
-    # your code goes here
+    input_array = number.to_s.split('').map(&:to_i)
+    if input_array.length >= 3
+        return (increase?(input_array) or decrease?(input_array))
+    else
+        return false
+    end
+end
+
+def increase?(input_array)
+    index = 0
+    while index < input_array.length
+        if input_array[index] == 9 && input_array[index + 1] != 0
+            return false
+        elsif input_array[index + 1] != input_array[index].next
+            return false
+        end
+        index += 1
+        return true    
+    end
+end
+
+def decrease?(input_array)
+    index = 0
+    while index < input_array.length
+        if input_array[index + 1] != input_array[index] - 1
+            return false
+        elsif input_array[index] == 1 && input_array[index + 1] != 0
+            return false
+        end
+        index += 1
+        return true
+    end
 end
