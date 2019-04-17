@@ -29,3 +29,14 @@ def spin_words (words)
     end
     return final.join.strip
 end
+
+
+def spin_words(words)
+    words = words.split
+    words.map do |x|
+        if x.length >= 5
+            x.reverse!
+        end
+    end
+    return words.join(' ')
+end
